@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>博客编辑页</title>
+    <style>
+
+        body {
+            text-align: center;
+            height: 100%;
+            font-family: "微软雅黑";
+            font-weight: 300;
+            color: #333;
+            background-color:#00151F ;
+        }
+        .title {
+            display: block;
+            width: 600px;
+            height: 50px;
+            margin: 10px auto;
+            font-size: 20px;
+            font-family: "微软雅黑 Light";
+            font-weight: bolder;
+            text-indent: 10px;
+
+        }
+
+        textarea {
+            display: block;
+            width: 600px;
+            margin: 10px auto;
+            font-size: 16px;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .button {
+            display: block;
+            width: 200px;
+            height: 50px;
+            margin: 0 auto;
+        }
+        .fram{
+            width: 700px;
+            height: 900px;
+            background-color: #9fcdff;
+            border-radius: 15px;
+            margin: 0 auto;
+            padding-top: 30px;
+        }
+        .nav {
+            height: 50px;
+            background: #000;
+            color: #fff;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-title {
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+<div class="nav">
+    <h2 class="nav-title"><a style="color: white;text-decoration: none" href="javascript:history.go(-1)">返回首页 </a></h2>
+</div>
+<div class="fram">
+    <form action="blogInsert" method="POST">
+        <!-- 用 input 表示文章的标题 -->
+        <div>博客标题：</div>
+        <input type="text" name="title" class="title" placeholder="请输入博客标题">
+        <!-- 用这个输入框表示正文 -->
+        <div>博客正文：</div>
+        <textarea name="content" rows="30" placeholder="在这里输入博客正文"></textarea>
+        <input type="submit" value="发布博客" class="button">
+    </form>
+</div>
+
+</body>
+
+</html>
